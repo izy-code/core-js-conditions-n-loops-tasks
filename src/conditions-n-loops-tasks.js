@@ -233,7 +233,9 @@ function isPalindrome(str) {
  */
 function getIndexOf(str, letter) {
   for (let i = 0; i < str.length; i += 1) {
-    if (str[i] === letter) return i;
+    if (str[i] === letter) {
+      return i;
+    }
   }
 
   return -1;
@@ -260,7 +262,9 @@ function isContainNumber(num, digit) {
   while (currentNum !== 0) {
     const lastDigit = currentNum % 10;
 
-    if (lastDigit === digit) return true;
+    if (lastDigit === digit) {
+      return true;
+    }
 
     currentNum = Math.floor(currentNum / 10);
   }
@@ -290,7 +294,9 @@ function getBalanceIndex(arr) {
   }
 
   for (let i = 1; i < arr.length - 1; i += 1) {
-    if (leftSum === rightSum) return i;
+    if (leftSum === rightSum) {
+      return i;
+    }
 
     leftSum += arr[i];
     rightSum -= arr[i + 1];
